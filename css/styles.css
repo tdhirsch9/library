@@ -1,0 +1,117 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  body {
+    height: 100vh;
+    display: grid;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: #1C1F26;
+    
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    background-color: #1C1F26;
+    color: #D1D5DB;
+}
+
+.add-book{
+    display: grid;
+    align-items: center;
+    align-content: center;
+    margin-top: 20px;
+    border: none;
+    padding: 10px;
+    border-radius: 10%;
+    background-color: #61AFEF;
+    color: #1C1F26;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.title-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+}
+
+.library-header{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: #2f394d;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.library-title{
+    color: #E0E0E0;
+}
+
+.left-sidebar{
+    display: grid;
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    background-color: #2f394d;
+}
+
+.right-sidebar{
+    display: grid;
+    grid-row: 1 / 3;
+    grid-column: 3 / 4;
+    background-color: #2f394d;
+}
+
+.footer{
+    display: grid;
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+    background-color: #2f394d;
+    
+}
+
+button:hover {
+    background-color: #98C379;
+    color: #1C1F26;
+}
