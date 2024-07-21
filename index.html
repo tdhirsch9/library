@@ -28,7 +28,34 @@
 
 <div class="main-content">
 
-
+    <div class="table-container">
+        <table id="table">
+            <tr>
+                <th class="book-name-column">Book Name</th>
+                <th class="pages-column">Page Count</th>
+                <th class="read-status-column">Has it been read</th>
+                <th class="delete-column">Remove Book from Library</th>
+            </tr>
+            <tr data-index-number="0">
+                <td>The Fellowship of the Ring</td>
+                <td>423</td>
+                <td><button type="button" class="toggle-button">Unread</button></td>
+                <td><button type="button" class="delete-button">Remove</button></td>
+            </tr>
+            <tr data-index-number="1">
+                <td>The Hobbit</td>
+                <td>310</td>
+                <td><button type="button" class="toggle-button">Read</button></td>
+                <td><button type="button" class="delete-button">Remove</button></td>
+            </tr>
+            <tr data-index-number="2">
+                <td>The Way of Kings</td>
+                <td>1280</td>
+                <td><button type="button" class="toggle-button">Read</button></td>
+                <td><button type="button" class="delete-button">Remove</button></td>
+            </tr>
+        </table>
+        </div>
 
 <p>Feel free to add more books to the collection!</p>
 
@@ -36,7 +63,26 @@
 
 
 
-<button type="button" class="add-book">NEW BOOK</button>
+<button type="button" class="add-book-button">NEW BOOK</button>
+
+
+
+
+<dialog class="add-book-dialog">
+    <form class="book-info">
+        <div class="input-container">
+            <h2>Add New Book</h2>
+            <label for="book-title">Title: </label>
+            <input type="text" id="book-title" name="book-title" class="book-title" required>
+            <label for="book-pages">Page Count: </label>
+            <input type="number" id="book-pages" name="book-pages" class="book-pages" required>
+            <label for="book-read-status">Has it been read: </label>
+            <input type="text" id="book-read-status" name="book-read-status" class="book-read-status" required>
+        </div>   
+        <button type="button" class="close-dialog-btn">Cancel</button>
+        <button type="submit" class="submit-book-btn">Submit</button>
+    </form>
+</dialog>
 
 </div>
 
